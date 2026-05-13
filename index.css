@@ -1,23 +1,30 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
 :root {
     --lightest: #d9d2cc;
     --light: #d6c8bb;
     --soft: #c9a89c;
     --mid: #a97a68;
     --dark: #7a4f3e;
+
     --cream: #F3EEEA;
     --warm-cream: #EAE0D8;
     --soft-beige: #D9C8BC;
     --dusty-rose: #C79F92;
     --terracotta: #A97463;
+
     --heading: #5C352B;
-
-
 }
 
+
+/* =========================
+   GLOBAL STYLES
+========================= */
 * {
     margin: 0;
     padding: 0;
-    box-sizing:border-box;
+    box-sizing: border-box;
     font-family: 'Georgia', serif;
 }
 
@@ -26,16 +33,6 @@ body {
     color: var(--dark);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.05rem 1rem;
-    background-color: var(--cream);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    }
-
 a {
     text-decoration: none;
     color: var(--heading);
@@ -43,25 +40,7 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: #A97463;
-}
-
-.logo-container {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    text-align: center;
-}
-
-.logo-container img {
-    height: 70px;
-    width: 70px;
-    border-radius: 50%;
-    border: solid var(--warm-cream) 1px;
-}
-
-.logo-text h1 {
-    font-size: 1.5rem;
+    color: var(--terracotta);
 }
 
 ul {
@@ -71,76 +50,127 @@ ul {
     align-items: center;
 }
 
+
+/* =========================
+   NAVBAR
+========================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.05rem 1rem;
+    background-color: var(--cream);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.logo-container img {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: 1px solid var(--warm-cream);
+}
+
+.logo-text h1 {
+    font-size: 1.5rem;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
 #hero {
-    height: 96vh;
-    background: linear-gradient(
-        to right,
-        var(--lightest) 0%,
-        rgba(217, 210, 204, 0.95) 20%,
-        rgba(217, 210, 204, 0.7) 40%,
-        rgba(217, 210, 204, 0.3) 60%,
-        rgba(217, 210, 204, 0) 100%
-    ),
-    url('assets/St-Therese-Parish-Mangere-East_d4dd5bc91be253eabc75ab3c7e10f513.jpg') center/cover no-repeat;
+    min-height: 96vh;
+
+    background:
+        linear-gradient(
+            to right,
+            var(--lightest) 0%,
+            rgba(217, 210, 204, 0.95) 20%,
+            rgba(217, 210, 204, 0.7) 40%,
+            rgba(217, 210, 204, 0.3) 60%,
+            rgba(217, 210, 204, 0) 100%
+        ),
+        url('assets/St-Therese-Parish-Mangere-East_d4dd5bc91be253eabc75ab3c7e10f513.jpg')
+        center/cover no-repeat;
+
     display: flex;
     align-items: center;
     padding: 2rem;
 }
 
+.hero-content {
+    padding: 0 4rem;
+}
+
 .hero-content h1 {
-    color: var(--dark);
     font-size: 3rem;
+    color: var(--dark);
 }
 
 .hero-content p {
-    color: var(--mid);
     font-size: 2.5rem;
+    color: var(--mid);
 }
 
 .hero-content button {
     margin-top: 1rem;
     padding: 0.8rem 1.5rem;
+
     border: none;
+    cursor: pointer;
+
     background-color: var(--mid);
     color: white;
-    cursor: pointer;
-    
 }
 
-.hero-content {
-    padding: 0 4rem;
-    gap: 4rem;
-}
 
-/*about*/
+/* =========================
+   ABOUT SECTION
+========================= */
 #about {
-    height: 96vh;
+    min-height: 96vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     background: var(--cream);
-}
-
-#about img {
-    height: 50vh;
-    flex: 1;
-    border-radius: 1.5rem;
-
-
 }
 
 .about-container {
     display: flex;
-    padding: 2.5rem;
-    gap: 2rem;
     justify-content: center;
+    gap: 2rem;
+
+    padding: 2.5rem;
+}
+
+#about img {
+    flex: 1;
+    height: 50vh;
+    border-radius: 1.5rem;
+    max-width: 100%;
+    display: block;
 }
 
 .about-text {
     flex: 1;
-    justify-content: center;
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
+
     gap: 0.5rem;
     padding-right: 200px;
 }
@@ -148,83 +178,94 @@ ul {
 .about-text h4 {
     color: var(--mid);
     letter-spacing: 0.1rem;
-
 }
 
 .about-text h2 {
     font-size: 3rem;
     padding-bottom: 1.5rem;
 }
+
 .about-text p {
     color: var(--dark);
 }
 
 
+/* =========================
+   MASS TIMES SECTION
+========================= */
 #mass-times {
     min-height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 4rem 2rem;
-    
 }
 
 .mass-card {
     width: 100%;
     max-width: 1000px;
+
+    padding: 3rem;
+
     background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(8px);
+
     border-radius: 28px;
-    padding: 3rem;
-    box-shadow: 
-    0 15px 40px rgba(0, 0, 0, 0.08)
-    0 4px 10px rgba(0, 0, 0, 0.04)
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.08),
+        0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
 .mass-card h2 {
+    margin-bottom: 0.5rem;
+
     text-align: center;
     font-size: 4rem;
+
     color: var(--heading);
-    margin-bottom: .5rem;
     font-family: 'Cormorant Garamond', serif;
 }
 
 .subtitle {
-    text-align: center;
-    color: var(--terracotta);
     margin-bottom: 3rem;
+
+    text-align: center;
     font-size: 1.2rem;
+
+    color: var(--terracotta);
 }
 
+/* Table */
 .table-header,
 .table-row {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 1.3rem 2rem;
     align-items: center;
-    
+
+    padding: 1.3rem 2rem;
+    text-align: center;
 }
 
 .table-header {
     background: var(--terracotta);
     color: white;
+
     border-radius: 16px 16px 0 0;
+
     font-weight: 600;
     letter-spacing: 1px;
-    text-align: center;
 }
 
 .table-row {
     background: rgba(243, 238, 234, 0.75);
-    border-bottom: 1px solid rgba(122, 79, 62, 0.45);
     color: var(--heading);
+
+    border-bottom: 1px solid rgba(122, 79, 62, 0.45);
+
     transition: 0.3s ease;
-    text-align: center;
-}
-
-
-.sunday {
-    border-radius: 0 0 16px 16px;
 }
 
 .table-row span,
@@ -232,29 +273,18 @@ ul {
     font-size: 1rem;
 }
 
-@media(max-width: 768px) {
-    .mass-card{
-        padding: 1.5rem;
-    }
-
-    .mass-card h2{
-        font-size: 2.5rem;
-    }
-
-    .table-header,
-    .table-row {
-        grid-template-columns: 1fr;
-        gap: .5rem;
-        text-align: center;
-    }
+.sunday {
+    border-radius: 0 0 16px 16px;
 }
 
 
-
+/* =========================
+   FOOTER
+========================= */
 .footer-container {
     display: flex;
-    color: var(--cream);
     text-align: center;
+    color: var(--cream);
 }
 
 .fh {
@@ -264,15 +294,13 @@ ul {
 
 .footer-logo {
     background-color: var(--soft);
-    
 }
 
 .footer-quick-links {
     background-color: var(--mid);
-    
 }
 
-.footer-quick-links ul{
+.footer-quick-links ul {
     display: flex;
     flex-direction: column;
     gap: 0;
@@ -280,18 +308,199 @@ ul {
 
 .footer-contact-info {
     background-color: var(--terracotta);
-    
 }
 
 .footer-stay-connected {
     background-color: var(--dark);
-    
 }
 
 .footer-bottom {
+    padding: 0.5rem;
+
+    text-align: center;
+    font-size: 0.8rem;
+
     background-color: var(--terracotta);
     color: var(--cream);
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 0.8rem;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+
+    /* HERO */
+    .hero-content {
+        padding: 0 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1.8rem;
+    }
+
+    /* ABOUT */
+    #about {
+        height: auto;
+        padding: 4rem 2rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    #about img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-text {
+        padding-right: 0;
+    }
+
+    .about-text h2 {
+        font-size: 2.5rem;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-wrap: wrap;
+    }
+
+    .fh {
+        min-width: 50%;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    nav {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .logo-container {
+        flex-direction: column;
+    }
+
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+
+    /* HERO */
+    #hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 4rem 1.5rem;
+        background-position: center;
+    }
+
+    .hero-content {
+        padding: 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.4rem;
+    }
+
+    .hero-content button {
+        width: 100%;
+    }
+
+    /* ABOUT */
+    .about-container {
+        padding: 1rem;
+        gap: 2rem;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        line-height: 1.7;
+    }
+
+    /* MASS TIMES */
+    #mass-times {
+        padding: 2rem 1rem;
+    }
+
+    .mass-card {
+        padding: 1.2rem;
+    }
+
+    .mass-card h2 {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .table-header,
+    .table-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .fh {
+        padding: 3rem 1.5rem;
+    }
+}
+
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .about-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .mass-card h2 {
+        font-size: 1.7rem;
+    }
+
+    .table-row span,
+    .table-header span {
+        font-size: 0.9rem;
+    }
+
+    .logo-container img {
+        width: 55px;
+        height: 55px;
+    }
 }
