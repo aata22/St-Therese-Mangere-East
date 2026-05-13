@@ -81,7 +81,7 @@ ul {
         rgba(217, 210, 204, 0.3) 60%,
         rgba(217, 210, 204, 0) 100%
     ),
-    url('St-Therese-Parish-Mangere-East_d4dd5bc91be253eabc75ab3c7e10f513.jpg') center/cover no-repeat;
+    url('assets/St-Therese-Parish-Mangere-East_d4dd5bc91be253eabc75ab3c7e10f513.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     padding: 2rem;
@@ -211,6 +211,7 @@ ul {
     border-radius: 16px 16px 0 0;
     font-weight: 600;
     letter-spacing: 1px;
+    text-align: center;
 }
 
 .table-row {
@@ -218,12 +219,9 @@ ul {
     border-bottom: 1px solid rgba(122, 79, 62, 0.45);
     color: var(--heading);
     transition: 0.3s ease;
+    text-align: center;
 }
 
-.table-row:hover {
-    background: rgba(217,200,188,0.45);
-    transform: scale(1.01);
-}
 
 .sunday {
     border-radius: 0 0 16px 16px;
