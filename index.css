@@ -517,11 +517,11 @@ nav {
 @media (max-width: 768px) {
 
     /* NAVBAR */
-    nav {
+    /*nav {
         flex-direction: column;
         padding: 1rem;
         gap: 1rem;
-    }
+    } 
 
     ul {
         flex-direction: column;
@@ -530,7 +530,7 @@ nav {
 
     .logo-container {
         flex-direction: column;
-    }
+    } */
 
     .logo-text h1 {
         font-size: 1.2rem;
