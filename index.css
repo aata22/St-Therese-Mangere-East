@@ -281,8 +281,9 @@ nav {
 }
 
 .about-text h4 {
-    color: var(--mid);
+    color: var(--accent);
     letter-spacing: 0.1rem;
+
 }
 
 .about-text h2 {
@@ -342,7 +343,7 @@ nav {
     text-align: center;
     font-size: 1.2rem;
 
-    color: var(--terracotta);
+    color: var(--accent);
 }
 
 /* Table */
@@ -451,11 +452,25 @@ nav {
         display: flex;
     }
 
-    /* HERO */
-    .hero-content {
-        padding: 0 2rem;
+      #hero {
+        justify-content: center;
+        text-align: center;
+        background: 
+        linear-gradient(
+            rgba(243, 238, 234, 0.82),
+            rgba(243, 238, 234, 0.82)
+
+        ),
+        url('assets/St-Therese-Parish-Mangere-East_d4dd5bc91be253eabc75ab3c7e10f513.jpg')
     }
 
+    .hero-content {
+        padding: 0;
+        max-width: 90%;
+    }
+
+    /* HERO */
+    
     .hero-content h1 {
         font-size: 2.5rem;
     }
@@ -522,16 +537,6 @@ nav {
     }
 
     /* HERO */
-    #hero {
-        height: auto;
-        min-height: 100vh;
-        padding: 4rem 1.5rem;
-        background-position: center;
-    }
-
-    .hero-content {
-        padding: 0;
-    }
 
     .hero-content h1 {
         font-size: 2rem;
